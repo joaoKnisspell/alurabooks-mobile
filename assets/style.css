@@ -1,0 +1,82 @@
+@import url(../assets/styles/header.css);
+@import url(../assets/styles/banner.css);
+@import url(../assets/styles/carrosel.css);
+@import url(../assets/styles/cards.css);
+@import url(../assets/styles/topicos.css);
+@import url(../assets/styles/contato.css);
+
+
+
+:root{
+    --cor-de-fundo:#EBECEE;
+    --branco-principal:#FFFFFF;
+    --fonte-texto:'Popins', sans-serif;
+    --laranja:#EB9B00;
+    --azul-degrade:linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    --azul-escuro:#002F52;
+    --fonte-titulo:'Josefin Sans', sans-serif;
+}
+
+body{
+    background-color:var(--cor-de-fundo);
+    font-family: var(--fonte-texto);
+}
+
+.rodape{
+    padding:1em 0 1.5em 1em;
+    border-top: 1px solid #000000;
+}
+
+.rodape__titulo{
+    font-weight: 400;
+    font-size: 16px;
+    color:#000000;
+    text-decoration: none;
+} 
+
+.lista__rodape{
+    display: none;
+}
+
+
+@media screen and (min-width:1024px){
+
+    .rodape{
+        display: flex;
+        justify-content: space-around;
+        padding:3.5em 0 3.5em 0em;
+        font-family: 'Poppins';
+    }
+
+    .rodape__titulo{
+        font-weight: 400;
+        font-size: 24px;
+    } 
+
+    .lista__rodape{
+        display: block;
+    }
+
+    .lista__rodape-titulo{
+        margin-bottom:1.5em;
+        color:#858585;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    .lista__rodape-item{
+        display: flex;
+        align-items: center;
+        margin-top:1em;
+    }
+
+    .lista__rodape-link{
+        margin-left: 0.5em;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+        color:#474646;
+    }
+}
+

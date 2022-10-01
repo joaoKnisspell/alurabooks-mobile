@@ -1,0 +1,185 @@
+.cabecalho{
+    background-color: var(--branco-principal);
+    display: flex;
+    justify-content: space-between; /*cada div para seu respectivo lado */
+    align-items: center;
+    position: relative;
+}
+
+.cabecalho__menu-hamburguer{
+    width: 24px;
+    height: 24px;
+    background-image:url(../img/Menu.svg);
+    display: inline-block;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    margin: 0 1em; /*Espaçar divs direita/esquerda das bordas */
+}
+
+.container__imagem{
+    padding: 1em; /*Espaçar icone menu e icone logo um do outro */
+}
+
+.container__direito{
+    padding: 0.5em; /*Espaçar icone menu e icone logo um do outro */
+}
+
+.lista-menu{ /*Modificando a <ul> */
+    list-style-type: none;
+    position: absolute;
+    left:-100vw; /* Colar na borda da esqquerda */
+    top:100%; /*Sair totalmente do menu */
+    width: 65vw;
+}
+
+.menu-lateral__ativo{
+    left:0;
+    transition:0.25s;
+}
+
+.lista-menu__menu{ /* Modificando o <li> */
+    /* border: 1px solid red; */
+    padding:16px 24px;
+    background-color: var(--branco-principal);
+}
+
+.titulo-lista{
+    color:var(--laranja);
+    font-weight:700;
+}
+
+.lista-menu__link{
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+/* Colocando cor no texto */
+background: var(--azul-degrade);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+
+.lista-menu__link:hover{
+    background-color:blue ;
+}
+
+.container__titulo{
+    display:none;
+}
+
+.lista__nav{
+    display: none;
+}
+
+.icon__nome{
+    display: none;
+}
+
+
+@media screen and (min-width:1024px){
+
+    .cabecalho{
+        justify-content: space-around;
+    }
+
+    .container__titulo, .container__titulo--negrito{
+        font-size: 30px;
+        font-family: var(--fonte-titulo);
+    }
+
+    .container__titulo{
+        font-family: var(--fonte-titulo);
+        font-weight: 400;
+        display: block;
+    }
+
+    .container__titulo--negrito{
+        font-family: var(--fonte-titulo);
+        font-weight: 700;
+        font-size: 30px;
+    }
+
+    #botao-menu{
+        display: none;
+    }
+
+    #meus-favoritos{
+        display: none;
+    }
+
+    .lista__nav{
+        display: flex;
+    }
+
+  
+
+    .nav__item-link{
+        color: #000000;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 16px;
+        text-transform: uppercase;
+        padding: 0.8em 1em 0.8em 1em;
+    }
+
+    .container__direito:first-child{
+        margin-right:2em;
+    }
+
+    #botao__categoria{
+        position: relative;
+    }
+
+    .lista__categoria-mobile{
+        position: absolute;
+        margin-top:1.8em;
+        margin-left: 0vw; 
+        display: none;
+
+    }
+
+    .item__categoria-mobile{
+        padding: 1.2em 1em;
+        background-color: var(--branco-principal);
+        /* border: 1px solid red; */
+        background-color: #ffffff;
+        color: white;
+    }
+
+    
+
+    .destaque-lista{
+        background:var(--azul-degrade);
+    }
+
+    .abrir__categoria{
+        display: block;
+    }
+
+    .mobile__item, .destaque-item{
+        font-weight:400;
+        font-size: 16px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    .mobile__item{
+        background: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .destaque-item{
+        color: white;
+    }
+
+
+}

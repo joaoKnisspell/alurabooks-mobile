@@ -1,0 +1,98 @@
+
+.cards{
+    margin: 1em;
+    background: var(--branco-principal);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px; 
+    padding: 1em; 
+    display: flex;
+    flex-direction: column;
+}
+
+.card__first-block{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+
+.card__second-block{
+    /* border: 1px  solid blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.card__titulo{
+    font-size: 16px;
+    font-weight: 700;
+    color:var(--laranja);
+}
+
+.card__titulo-secundario{
+    font-size: 18px;
+    font-weight: 700;
+    color:var(--azul-escuro);
+    margin: 0.5em 0;
+}
+
+.card__texto{
+    font-size: 14px;
+    font-weight: 400;
+    color:#000000;
+    line-height: 20px;
+    margin-bottom: 0.5em;
+    width: 85%;
+}
+
+.card__lista-botoes{
+    display: flex;
+    align-items: center;
+}
+
+.botoes__item:last-child{
+    margin-left: 0.5em;
+}
+
+.card__botao-principal{
+    /* border:1px solid green; */
+    text-align: center;
+    padding: 1em 2.5em;
+    text-decoration: none;
+    background-color: var(--laranja);
+    color: var(--branco-principal);
+    font-weight: 700;
+}
+
+.estrelas{
+    margin-bottom:0.5em;
+}
+
+
+@media screen and (min-width:600px){
+    .cards{
+        width: 65%;
+        margin: 2em auto;
+    }
+
+    .swiper{
+        width: 75%;
+    }
+}
+
+
+@media screen and (min-width:1024px){
+    .cards{
+        width: 50%;
+        margin:3em auto 2.5em auto ;
+    }
+
+    .block__left{
+        padding-top: 0.5em;
+    }
+
+    .card__titulo-secundario{
+        margin: 0.8em 0;
+    }
+
+}
